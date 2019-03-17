@@ -19,9 +19,7 @@ var getElementsByClassName = function(className) {
     function iterateFunc(node){
         if (node.classList !== undefined && node.classList.contains(className)){
             result.push(node); 
-        } else if (node.childNodes.length === 0) {
-            return;
-        }
+        } 
         if (node.childNodes !== undefined){
             for (var i = 0; i < node.childNodes.length; i++){
                 var childClassList = node.childNodes[i]
