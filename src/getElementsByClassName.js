@@ -17,6 +17,7 @@
 var getElementsByClassName = function(className) {
     var result = []; 
     function iterateFunc(node){
+        //check the classList of document.body first and then move through each of the childNodes 
         if (node.classList !== undefined && node.classList.contains(className)){
             result.push(node); 
         } 
