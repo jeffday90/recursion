@@ -21,12 +21,10 @@ var getElementsByClassName = function(className) {
         if (node.classList !== undefined && node.classList.contains(className)){
             result.push(node); 
         } 
-        if (node.childNodes !== undefined){
-            //iterate through each of the childNodes of 'node'
-            for (var i = 0; i < node.childNodes.length; i++){
-                var childClassList = node.childNodes[i]
-                iterateFunc(childClassList);
-            }
+        //iterate through each of the childNodes of 'node'
+        for (var i = 0; i < node.childNodes.length; i++){
+            var childClassList = node.childNodes[i]
+            iterateFunc(childClassList);
         }
     }
     //call the func immediately with document(dot)body first
