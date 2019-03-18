@@ -21,6 +21,7 @@ var getElementsByClassName = function(className) {
             result.push(node); 
         } 
         if (node.childNodes !== undefined){
+            //iterate through each of the childNodes of 'node'
             for (var i = 0; i < node.childNodes.length; i++){
                 var childClassList = node.childNodes[i]
                 iterateFunc(childClassList);
